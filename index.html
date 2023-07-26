@@ -6,6 +6,7 @@
     <title>Sign-Up Form</title>
     
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <div id="left-panel">
@@ -21,27 +22,29 @@
     </div>
 
     <div id="main">
-        <h1>This is not a real online service!</h1>
+        <h1>This is <span class="text-viking">not</span> a real online service!</h1>
         <div class="text-dummy">
-            <p>You <span class="text-viking">WILL</span> join the <span class="text-viking">ODIN BERSERKS!</span></p>
-            <p>Your service is <span class="text-viking">REQUIRED!</span></p>
+            <p>You <span class="text-viking">WILL</span> join the <span class="text-viking">ODIN BERSERKS!</span><br>
+                Your service is <span class="text-viking">REQUIRED!</span>
+            </p>
+            
             <p>Sign Up Right <span class="text-viking">NOW!</span></p>
         </div>
         <form id="form">
-            <div id="user-form">
+            <div id="form-user">
                 <div class="form-input">
                     <label for="first_name">FIRST NAME</label><br>
-                    <input id="first_name" name="first_name">
+                    <input placeholder="John" id="first_name" name="first_name" required>
                 </div>
 
                 <div class="form-input">
                     <label for="last_name">LAST NAME</label><br>
-                    <input id="last_name" name="last_name">
+                    <input placeholder="Smith" id="last_name" name="last_name" required>
                 </div>
 
                 <div class="form-input">
                     <label for="email">EMAIL</label><br>
-                    <input type="email" id="email" name="email">
+                    <input placeholder="john.smith@email.com" type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-input">
@@ -50,13 +53,14 @@
                 </div>
 
                 <div class="form-input">
-                    <label for="password">PASSWORD</label><br>
-                    <input type="password" id="password" name="password">
+                    <label for="passwordOne">PASSWORD</label><br>
+                    <input type="password" id="passwordOne" name="passwordOne" required>
+                    <div id="errorMsg"></div>
                 </div>
 
                 <div class="form-input">
-                    <label>CONFIRM PASSWORD</label><br>
-                    <input type="password">
+                    <label for="passwordTwo">CONFIRM PASSWORD</label><br>
+                    <input type="password" id="passwordTwo" name="passwordTwo" required>
                 </div>
 
             </div>
@@ -65,9 +69,10 @@
         </form>
 
         <div class="log-in">
-            <p>Already have an account? <span class="text-viking">WHY ARE YOU NOT IN THE FRONT LINE</span></p>
-            <a href=""><span class="text-viking">Log In</span></a>
+            <p>Already have an account? <span class="text-viking">WHY ARE YOU NOT ON THE FRONT LINE!</span></p>
+            <a class="form-link" href=""><span class="text-viking">Log In</span></a>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
